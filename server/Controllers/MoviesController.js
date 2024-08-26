@@ -112,12 +112,57 @@ const getRandomMovies = asyncHandler(async (req, res) => {
     }
 })
 
+// ************** PRIVATE CONTROLLERS **************
+
+const createMovieReview = asyncHandler(async (req, res) => {
+    const { rating, comment } = req.body;
+    try {
+        const movie = await Movie.findById(req.params.id);
+
+        if (movie) {
+            const alreadyReviewed = movie.reviews.find(
+                (r) => r.userId.toString() === req.user._id.toString()
+            );
+
+            if (alreadyReviewed) {
+                res.status(400);
+                throw new Error("You already reviewed this movie");
+            }
+
+            const review = {
+                userName: req.user.fullName,
+                userId: req.user._id,
+                userImage: req.user.image,
+                rating: Number(rating),
+                comment,
+            }
+
+            movie.reviews.push(review);
+            movie.numberOfReviews = movie.reviews.length;
+
+            movie.rate = movie.reviews.reduce((acc, item) => item.rating + acc, 0) / movie.reviews.length;
+
+            await movie.save();
+
+            res.status(201).json({
+                message: "Review added",
+            });
+        } else {
+            res.status(404);
+            throw new Error("Movie not found");
+        }
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+})
+
 export {
     importMovies,
     getMovies,
     getMovieById,
     getTopRatedMovies,
     getRandomMovies,
+    createMovieReview,
 };
 
 //2h8p

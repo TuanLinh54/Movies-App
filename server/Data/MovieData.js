@@ -36,7 +36,7 @@ export const MoviesData = [
         rate: 4,
     },
     {
-        name: 'Army of the Dead',
+        name: 'Đảo Hải Tặc',
         desc: 'Following a zombie outbreak in Las Vegas, a group of mercenaries take the ultimate gamble, venturing into the quarantine zone to pull off the greatest heist ever attempted',
         titleImage: '4a.jpg',
         image: '4.jpg',
@@ -48,7 +48,7 @@ export const MoviesData = [
         rate: 5,
     },
     {
-        name: 'Army of the Dead',
+        name: 'Ma Sơ Trục Quỷ',
         desc: 'Following a zombie outbreak in Las Vegas, a group of mercenaries take the ultimate gamble, venturing into the quarantine zone to pull off the greatest heist ever attempted',
         titleImage: '5a.jpg',
         image: '5.jpg',
@@ -60,7 +60,7 @@ export const MoviesData = [
         rate: 5,
     },
     {
-        name: 'Army of the Dead',
+        name: 'Loki (Phần 2)',
         desc: 'Following a zombie outbreak in Las Vegas, a group of mercenaries take the ultimate gamble, venturing into the quarantine zone to pull off the greatest heist ever attempted',
         titleImage: '6a.jpg',
         image: '6.jpg',
@@ -72,7 +72,7 @@ export const MoviesData = [
         rate: 1,
     },
     {
-        name: 'Army of the Dead',
+        name: 'Bùa Hình Nhân',
         desc: 'Following a zombie outbreak in Las Vegas, a group of mercenaries take the ultimate gamble, venturing into the quarantine zone to pull off the greatest heist ever attempted',
         titleImage: '7a.jpg',
         image: '7.jpg',
@@ -84,7 +84,7 @@ export const MoviesData = [
         rate: 2,
     },
     {
-        name: 'Army of the Dead',
+        name: 'Thế giới ma quái 2',
         desc: 'Following a zombie outbreak in Las Vegas, a group of mercenaries take the ultimate gamble, venturing into the quarantine zone to pull off the greatest heist ever attempted',
         titleImage: '7a.jpg',
         image: '7.jpg',
